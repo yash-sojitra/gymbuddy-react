@@ -13,7 +13,7 @@ export const useSignup = () => {
         setIsLoading(true)
         setError(null)
 
-        const response = await fetch("/api/user/signup",{
+        const response = await fetch("http://13.201.135.59:4000/api/user/signup",{
             method:"POST",
             headers: {'Content-Type':"application/json"},
             body: JSON.stringify({email,password})
