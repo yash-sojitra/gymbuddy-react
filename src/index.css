@@ -91,7 +91,7 @@ form button {
 }
 div.error {
   padding: 10px;
-  background: #ffefef;
+  background: #f8ffef;
   border: 1px solid var(--error);
   color: var(--error);
   border-radius: 4px;
@@ -100,7 +100,7 @@ div.error {
 
 div.info {
   padding: 10px;
-  background: #ffefef;
+  background: #effffa;
   border: 1px solid var(--primary);
   color: var(--primary);
   border-radius: 4px;

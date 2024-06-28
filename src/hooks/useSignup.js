@@ -20,6 +20,7 @@ export const useSignup = () => {
         })
 
         const json = await response.json()
+        console.log(json);
 
         if(!response.ok){
             setIsLoading(false)
@@ -27,7 +28,7 @@ export const useSignup = () => {
         }
         
         if(response.ok){
-            setInfo(json.setInfo)
+            setInfo(json.info)
             setIsLoading(false)
         }
 
