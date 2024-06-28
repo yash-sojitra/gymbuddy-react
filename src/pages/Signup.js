@@ -27,6 +27,7 @@ const Signup = () => {
                 onChange={(e) => setPassword(e.target.value)}
                 value={password}
             />
+            <p>include numbers, both upper and lower case letters with special characters</p>
             <button type="submit" disabled={isLoading}>Sign up</button>
             {error && <div className="error">{error}</div>}
             {!error && info && <div className="info">{info}</div>}

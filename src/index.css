@@ -139,4 +139,9 @@ form.signup, form.login {
   border-radius: 4px;
 }
 
+form p {
+  font-size: 12px;
+  color: #555;
+}
+
 
