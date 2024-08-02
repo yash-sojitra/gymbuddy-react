@@ -1,6 +1,7 @@
 name: Deploy React Application
 
-on: 
+on:
+  workflow_dispatch:
   push:
     branches:
       - main
