@@ -26,8 +26,17 @@ jobs:
     needs: build
     runs-on: self-hosted
     steps:
-      - name: removing previous running container
-        run: docker rm -f react-app-container
+      - name: Stop previous running container if exists
+        run: |
+          if [ "$(docker ps -q -f name=nodejs-app-container)" ]; then
+            docker stop react-app-container
+          fi
+      
+      - name: Remove previous container if exists
+        run: |
+          if [ "$(docker ps -a -q -f name=nodejs-app-container)" ]; then
+            docker rm react-app-container
+          fi
               
       - name: Pull image from docker hub
         run: docker pull yashsojitra/gymbuddy-react:latest
