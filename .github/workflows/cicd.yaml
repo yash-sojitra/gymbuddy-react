@@ -28,13 +28,13 @@ jobs:
     steps:
       - name: Stop previous running container if exists
         run: |
-          if [ "$(docker ps -q -f name=nodejs-app-container)" ]; then
+          if [ "$(docker ps -q -f name=react-app-container)" ]; then
             docker stop react-app-container
           fi
       
       - name: Remove previous container if exists
         run: |
-          if [ "$(docker ps -a -q -f name=nodejs-app-container)" ]; then
+          if [ "$(docker ps -a -q -f name=react-app-container)" ]; then
             docker rm react-app-container
           fi
               
